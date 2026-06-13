@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekingz Multimedia | Home</title>
+    <!-- Tailwind CSS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Google Fonts: Montserrat & Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Video and Camera Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #1A1A1A;
+            color: #FFFFFF;
+        }
+        h1, h2, h3, .font-heading {
+            font-family: 'Montserrat', sans-serif;
+        }
+        /* Exact color match from image_d0e938.jpg */
+        .bg-brand-green { background-color: #22C55E; }
+        .text-brand-green { color: #22C55E; }
+        .border-brand-green { border-color: #22C55E; }
+        
+        /* Custom glowing effect for the active navigation marker and accents */
+        .green-glow {
+            box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-emerald-500 selection:text-black">
+
+    <!-- NAVBAR SECTION -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 px-6 md:px-12 py-4 flex justify-between items-center">
+        <!-- Logo Area -->
+        <div class="flex items-center space-x-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 p-[1px] flex items-center justify-center shadow-lg">
+                <div class="w-full h-full bg-[#1A1A1A] rounded-full flex items-center justify-center">
+                    <span class="relative flex items-center justify-center w-10 h-10 rounded-full border border-white/10 p-[2px] bg-neutral-900 shadow-inner group">
+    <!-- Glowing Status Ring Wrapper -->
+    <div class="absolute inset-0 rounded-full border border-brand-green/40 opacity-75 green-glow animate-pulse"></div>
+    
+    <!-- Perfectly Clipped Circular Profile Picture -->
+    <img src="./image.png" alt="Ekingz Headshot" class="relative z-10 w-full h-full rounded-full object-cover filter contrast-105 saturate-110">
+</span>
+                </div>
+            </div>
+            <div class="leading-none">
+                <span class="block font-heading font-black text-base tracking-wider text-white">EKINGZ</span>
+                <span class="block text-[9px] uppercase tracking-[0.28em] text-gray-400 mt-0.5">Multimedia</span>
+            </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="hidden md:flex items-center space-x-8 font-heading text-[11px] font-bold uppercase tracking-[0.18em]">
+            <li>
+                <a href="#home" class="text-brand-green flex flex-col items-center group">
+                    <span>Home</span>
+                    <span class="w-4 h-[2px] bg-brand-green mt-1 rounded-full green-glow"></span>
+                </a>
+            </li>
+            <li><a href="#services" class="text-gray-300 hover:text-white transition duration-200">Services</a></li>
+            <li><a href="#portfolio" class="text-gray-300 hover:text-white transition duration-200">Portfolio</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition duration-200">About</a></li>
+            <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-200">Contact</a></li>
+        </ul>
+
+        <!-- Action Button -->
+        <a href="#contact" class="bg-brand-green text-white font-heading font-bold text-[11px] uppercase tracking-widest px-5 py-2.5 rounded hover:bg-emerald-600 transition duration-300">
+            Book Production
+        </a>
+    </nav>
+
+    <!-- HERO SECTION WITH POWERED DRONE ANIMATION -->
+    <section id="home" class="relative min-h-screen flex items-center justify-start pt-20 overflow-hidden">
+        <!-- High-Resolution Night Skyline Background Layer -->
+        <div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style="background-image: linear-gradient(90deg, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.85) 100%), url('https://images.unsplash.com/photo-1546708973-b339540b5162?auto=format&fit=crop&q=80&w=1920');"></div>
+        
+        <!-- Animated Drone Layer (Starts completely hidden to the right) -->
+        <div id="hero-drone" class="absolute right-[-60%] top-[30%] md:top-[35%] w-[320px] md:w-[480px] z-10 pointer-events-none filter drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] opacity-0">
+            <img src="./drone.png" alt="Cinematic Drone Asset" class="w-full h-auto object-contain transform -rotate-3">
+        </div>
+
+        <!-- Hero Content Box -->
+        <div class="relative z-20 max-w-5xl mx-auto px-6 md:px-12 w-full">
+            <div class="max-w-xl text-left space-y-4">
+                <h1 class="font-heading font-black text-4xl md:text-5xl lg:text-6xl text-white tracking-tight uppercase leading-[1.08]">
+                    Visual Storytelling,<br>Uncompromised.
+                </h1>
+                <p class="text-gray-300 font-light text-sm md:text-base tracking-wide max-w-md leading-relaxed">
+                    From Corporate to Commercial,<br>Cinematic Drone to Photography.
+                </p>
+                <div class="pt-2">
+                    <a href="#services" class="inline-block bg-brand-green text-white font-heading font-bold text-xs uppercase tracking-[0.2em] px-8 py-4 rounded hover:bg-emerald-600 transition duration-300 shadow-lg shadow-emerald-950/40">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATE YOUR GSAP SCRIPT SCRIPT TAG AT THE VERY BOTTOM OF YOUR HTML TO THIS -->
+    <script>
+        // Make sure the main GSAP library is linked in your <head>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"> <\/script>
+
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Create Master Timeline for Intro Sequence
+            const tl = gsap.timeline();
+
+            // 2. Fly-In Animation Script
+            tl.to("#hero-drone", {
+                duration: 2.2,
+                right: window.innerWidth > 768 ? "12%" : "5%", // Handle screen widths smoothly
+                opacity: 1,
+                ease: "power4.out",
+                onComplete: startDroneHover // Trigger hover stabilization when fly-in finishes
+            });
+
+            // 3. Powered Hover Engine Loop Script
+            function startDroneHover() {
+                // Subtle Up and Down drifting motion
+                gsap.to("#hero-drone", {
+                    y: "-=15",
+                    duration: 2,
+                    ease: "sine.inOut",
+                    yoyo: true,
+                    repeat: -1
+                });
+
+                // Fast Engine Vibration (Simulating engine motor rotation speed)
+                gsap.to("#hero-drone img", {
+                    x: "+=1",
+                    y: "+=0.5",
+                    rotation: "+=0.5",
+                    duration: 0.05,
+                    ease: "none",
+                    yoyo: true,
+                    repeat: -1
+                });
+            }
+        });
+    </script>
+
+    <!-- Core Services Grid Layout -->
+            <div class="grid grid-cols-3 gap-4 max-w-2xl mx-auto mt-12">
+                
+                <!-- Video Tab -->
+                <div class="flex flex-col items-center justify-center space-y-3 cursor-pointer group relative py-2">
+                    <div class="text-brand-green text-xl group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-white">Video</span>
+                    <div class="absolute -left-2 top-0 h-full w-[2px] bg-gradient-to-b from-transparent via-brand-green to-transparent opacity-100 green-glow"></div>
+                </div>
+
+                <!-- PERFECTLY MATCHED DRONE ICON (Replaces the bug icon from image_c51a64.jpg) -->
+                <div class="flex flex-col items-center justify-center space-y-3 cursor-pointer group py-2">
+                    <div class="text-brand-green w-5 h-5 flex items-center justify-center group-hover:scale-110 transition duration-300">
+                        <svg class="w-full h-full fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <!-- High-fidelity solid quadcopter chassis matching fontawesome style weights -->
+                            <path d="M21 11h-2.1c-.4-1.9-1.7-3.4-3.5-4.1l1-2c.1-.3 0-.7-.3-.9-.3-.1-.7 0-.9.3l-1.1 2.2c-.7-.1-1.4-.1-2.1 0L11 4.3c-.1-.3-.5-.5-.9-.3-.3.1-.4.5-.3.9l1 2c-1.8.7-3.1 2.2-3.5 4.1H5c-.6 0-1 .4-1 1s.4 1 1 1h2.1c.4 1.9 1.7 3.4 3.5 4.1l-1 2c-.1.3 0 .7.3.9.1.1.2.1.3.1.2 0 .5-.2.6-.4l1.1-2.2c.7.1 1.4.1 2.1 0l1.1 2.2c.1.2.4.4.6.4.1 0 .2 0 .3-.1.3-.1.4-.5.3-.9l-1-2c1.8-.7 3.1-2.2 3.5-4.1H21c.6 0 1-.4 1-1s-.4-1-1-1zm-9 6c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5z"/>
+                        </svg>
+                    </div>
+                    <span class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white transition">Drone</span>
+                </div>
+
+                <!-- Photography Tab -->
+                <div class="flex flex-col items-center justify-center space-y-3 cursor-pointer group py-2">
+                    <div class="text-brand-green text-xl group-hover:scale-110 transition duration-300">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xs uppercase tracking-[0.2em] text-gray-400 group-hover:text-white transition">Photography</span>
+                </div>
+
+            </div>
+
+
+    <!-- SERVICES / PORTFOLIO SECTION -->
+    <section id="portfolio" class="bg-white text-black py-16 px-6 md:px-12 relative z-20">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- Section Header & Filter Tabs -->
+            <div class="text-center mb-12">
+                <h2 class="font-heading font-black text-3xl md:text-4xl uppercase tracking-tight text-gray-900 mb-6">
+                    Services
+                </h2>
+                <!-- Exact filter layout from the mockup -->
+                <div class="flex flex-wrap justify-center gap-2 text-[10px] font-heading font-black uppercase tracking-widest">
+                    <button class="bg-[#1A1A1A] text-white px-5 py-2.5 rounded transition">All</button>
+                    <button class="bg-gray-100 text-gray-400 px-5 py-2.5 rounded hover:bg-gray-200 hover:text-black transition">Video Production</button>
+                    <button class="bg-gray-100 text-gray-400 px-5 py-2.5 rounded hover:bg-gray-200 hover:text-black transition">Drone Coverage</button>
+                    <button class="bg-gray-100 text-gray-400 px-5 py-2.5 rounded hover:bg-gray-200 hover:text-black transition">Photography</button>
+                </div>
+            </div>
+
+            <!-- Portfolio Grid Framework (Matches the 5-card layout) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                
+                <!-- Card 1: Music Video -->
+                <div class="bg-white rounded overflow-hidden border border-gray-100 group shadow-sm">
+                    <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" alt="Music Video" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                        <div class="absolute inset-0 bg-black/20 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <div class="w-12 h-12 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white border border-white/30">
+                                <i class="fas fa-play text-xs ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center space-x-2 text-gray-400 mb-1.5">
+                            <i class="fas fa-video text-xs"></i>
+                            <span class="font-heading font-extrabold text-[10px] uppercase tracking-[0.2em]">Music Video</span>
+                        </div>
+                        <h4 class="font-heading font-black text-lg uppercase text-gray-900 tracking-wide">Artist Name</h4>
+                        <p class="text-xs text-gray-400 font-medium mt-1">Lagos</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Commercial -->
+                <div class="bg-white rounded overflow-hidden border border-gray-100 group shadow-sm">
+                    <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&q=80&w=800" alt="Corporate Commercial" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center space-x-2 text-gray-400 mb-1.5">
+                            <i class="fas fa-video text-xs"></i>
+                            <span class="font-heading font-extrabold text-[10px] uppercase tracking-[0.2em]">Corporate Commercial</span>
+                        </div>
+                        <h4 class="font-heading font-black text-lg uppercase text-gray-900 tracking-wide">Commercial Product</h4>
+                        <p class="text-xs text-gray-400 font-medium mt-1">Lagos</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Drone Sweep -->
+                <div class="bg-white rounded overflow-hidden border border-gray-100 group shadow-sm">
+                    <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&q=80&w=800" alt="Cinematic Drone" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center space-x-2 text-gray-400 mb-1.5">
+                            <i class="fas fa-helicopter text-xs"></i>
+                            <span class="font-heading font-extrabold text-[10px] uppercase tracking-[0.2em]">Cinematic Drone View</span>
+                        </div>
+                        <h4 class="font-heading font-black text-lg uppercase text-gray-900 tracking-wide">Cinematic Drone - Cityscape</h4>
+                        <p class="text-xs text-gray-400 font-medium mt-1">Orona</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Product Photo -->
+                <div class="bg-white rounded overflow-hidden border border-gray-100 group shadow-sm">
+                    <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=800" alt="Product Photography" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center space-x-2 text-gray-400 mb-1.5">
+                            <i class="fas fa-camera text-xs"></i>
+                            <span class="font-heading font-extrabold text-[10px] uppercase tracking-[0.2em]">Commercial Product Photo</span>
+                        </div>
+                        <h4 class="font-heading font-black text-lg uppercase text-gray-900 tracking-wide">(Brand Name)</h4>
+                        <p class="text-xs text-gray-400 font-medium mt-1">Lagos</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Corporate Event (Full Width Centered Layout row to stack cleanly) -->
+                <div class="bg-white rounded overflow-hidden border border-gray-100 group shadow-sm md:col-span-2 max-w-xl mx-auto w-full">
+                    <div class="aspect-video w-full overflow-hidden bg-gray-900 relative">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=800" alt="Corporate Event" class="w-full h-full object-cover group-hover:scale-105 transition duration-500 opacity-90">
+                    </div>
+                    <div class="p-5">
+                        <div class="flex items-center space-x-2 text-gray-400 mb-1.5">
+                            <i class="fas fa-camera text-xs"></i>
+                            <span class="font-heading font-extrabold text-[10px] uppercase tracking-[0.2em]">Corporate Event - Gala</span>
+                        </div>
+                        <h4 class="font-heading font-black text-lg uppercase text-gray-900 tracking-wide">Corporate Event</h4>
+                        <p class="text-xs text-gray-400 font-medium mt-1">Lagos</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ABOUT US SECTION -->
+    <section id="about" class="bg-[#1A1A1A] text-white py-16 px-6 md:px-12 relative z-20 border-t border-white/5">
+        <div class="max-w-4xl mx-auto space-y-12">
+            
+            <!-- Founder Profile Block Layout -->
+            <div class="bg-[#242424] p-8 rounded-xl border border-white/5 flex flex-col md:flex-row gap-8 items-center md:items-start">
+                <!-- Exact Suit-and-Tie Professional Profile Frame -->
+                <div class="w-32 h-32 rounded overflow-hidden bg-gray-800 border-2 border-brand-green mx-auto md:mx-0 flex-shrink-0 shadow-2xl">
+                    <img src="./image.png" alt="Ekingz Founder Portrait" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Profile Typography Matrix -->
+                <div class="text-center md:text-left space-y-3 flex-1">
+                    <span class="text-[10px] font-heading font-black uppercase tracking-[0.25em] text-brand-green block">ABOUT US</span>
+                    <h3 class="font-heading font-black text-xl uppercase tracking-wide text-white">Founder's Vision:</h3>
+                    <p class="text-gray-300 text-sm font-light leading-relaxed">
+                        Ekingz Multimedia brings a refined standard to visual productions, capturing moments with precise intent. Based out of Lagos, our focus is anchored on deliverable excellence across corporate visual messaging and high-ticket media executions.
+                    </p>
+                    <div class="pt-2 border-t border-white/5">
+                        <h4 class="text-[10px] font-heading font-bold uppercase tracking-widest text-gray-400 mb-1">Our Commit Profile:</h4>
+                        <p class="text-xs text-gray-400 font-normal tracking-wide">
+                            <span class="text-white font-semibold">Corporate Plans</span> &nbsp;|&nbsp; <span class="text-white font-semibold">B2B Production</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Statistics Metric Bar -->
+            <div class="bg-[#1A1A1A] border border-white/10 p-6 rounded-xl flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 shadow-inner">
+                <div class="space-y-0.5">
+                    <h4 class="font-heading font-black text-xs uppercase text-white tracking-[0.15em]">OUR COMMITMENT:</h4>
+                    <p class="text-[11px] text-gray-400 font-light tracking-wide">Experience, Quality, Results.</p>
+                </div>
+                <div class="sm:text-right">
+                    <span class="block font-heading font-black text-3xl md:text-4xl text-brand-green tracking-tight leading-none">Over 350+</span>
+                    <span class="block text-[9px] uppercase text-gray-500 tracking-[0.25em] font-heading font-black mt-1.5">satisfied clients</span>
+                </div>
+            </div>
+
+            <!-- TESTIMONIALS SECTION (PREMIUM BLACK SLIDER) -->
+    <section id="testimonials" class="bg-[#1A1A1A] text-white py-20 overflow-hidden relative z-20 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-6 mb-12 text-center">
+            <span class="text-[10px] font-heading font-black uppercase tracking-[0.25em] text-brand-green block mb-2">VOUCHERS</span>
+            <h2 class="font-heading font-black text-2xl md:text-3xl uppercase tracking-tight text-white">
+                Client Testimonials
+            </h2>
+            <p class="text-xs text-gray-500 font-light mt-2 tracking-wide">Trusted by corporate panels and creative networks worldwide.</p>
+        </div>
+
+        <!-- Infinite Carousel Wrapper -->
+        <div class="w-full relative flex overflow-x-hidden py-4 mask-gradient">
+            <!-- Track 1 (First set of 10) -->
+            <div class="flex space-x-6 animate-marquee whitespace-nowrap">
+                <!-- Rev 1 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"The multi-angle drone capture sequence executed for our corporate launch completely reset our asset standard. Exceptional precision formatting."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Sarah F.</span>
+                </div>
+                <!-- Rev 2 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"Absolute professional output. The visual storytelling flow and lighting arrays delivered cleanly on every single metric we requested."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Wale T.</span>
+                </div>
+                <!-- Rev 3 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"High-fidelity drone tracking captures that instantly elevated our corporate portfolio assets. Clean delivery loops all through."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Segun A.</span>
+                </div>
+                <!-- Rev 4 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"They captured our music video with stunning cinematic depth. The grading matches international standards flawlessly."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Davio O.</span>
+                </div>
+                <!-- Rev 5 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"Unmatched response speed and structural framework engineering during our live stadium event coverage. Elite camera crew."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Kunle A.</span>
+                </div>
+                <!-- Rev 6 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"The commercial product photography looks clean, crisp, and ready for global billboard scaling. Highly recommend their studio."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Amaka J.</span>
+                </div>
+                <!-- Rev 7 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"Our real estate listings look phenomenal thanks to the crisp landscape sweeps and stable editing layout loops."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Chief T.</span>
+                </div>
+                <!-- Rev 8 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"Flawless handling of our annual corporate gala. The frame consistency and low-light visual stabilization were superb."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Banke W.</span>
+                </div>
+                <!-- Rev 9 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"From structural scripting feedback to the final drone runtime master render, Ekingz handles media with high-level authority."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Tunde R.</span>
+                </div>
+                <!-- Rev 10 -->
+                <div class="inline-block w-[300px] md:w-[360px] bg-[#242424] p-6 rounded-xl border border-white/5 whitespace-normal shadow-lg">
+                    <p class="text-xs font-light text-gray-300 italic leading-relaxed">"We locked them in for a 3-month product campaign rollout, and their visual solutions drastically upscaled our digital engagement numbers."</p>
+                    <span class="font-heading font-black text-brand-green tracking-widest block mt-4 uppercase text-[9px]">- Nneka O.</span>
+                </div>
+            </div>
+
+                        </div>
+        </div>
+    </section>
+
+    <!-- APPEND THESE NEW KEYFRAME CSS TRICKS TO YOUR INTERNAL <style> TAG AT THE TOP OF THE CODE -->
+    <style>
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-100%); }
+        }
+        .animate-marquee {
+            animation: marquee 35s linear infinite;
+        }
+        /* Fade effect on the edges of the horizontal slider so it looks smooth */
+        .mask-gradient {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        /* Pause slide animation when hovering mouse cursor */
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+
+        </div>
+    </section>
+
+    <!-- TRUST & RESULTS SECTION (PREMIUM WHITE CONTRAST BREAK) -->
+    <section id="trust-results" class="bg-white text-black py-20 px-6 md:px-12 relative z-20 border-t border-gray-150">
+        <div class="max-w-5xl mx-auto">
+            
+            <!-- Clean Tracking Header -->
+            <div class="text-center mb-12">
+                <h3 class="font-heading font-black text-xs uppercase tracking-[0.3em] text-gray-400">
+                    TRUST & RESULTS
+                </h3>
+            </div>
+
+            <!-- Interactive Before/After Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                
+                <!-- Panel 1: Raw Image -->
+                <div class="relative aspect-square rounded-xl overflow-hidden bg-gray-100 border border-gray-200 group shadow-sm transition duration-300 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=400" alt="Production Frame Before 1" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <span class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-sm text-[9px] font-heading font-bold uppercase tracking-widest px-2 py-1 rounded text-gray-300">
+                        RAW FRAME
+                    </span>
+                </div>
+
+                <!-- Panel 2: Mastered Image (No overused green) -->
+                <div class="relative aspect-square rounded-xl overflow-hidden bg-gray-100 border border-gray-200 group shadow-sm transition duration-300 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?auto=format&fit=crop&q=80&w=400" alt="Production Frame After 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute bottom-3 left-3 bg-neutral-900 text-white text-[9px] font-heading font-black uppercase tracking-widest px-2 py-1 rounded shadow-sm">
+                        GRADED MASTER
+                    </span>
+                </div>
+
+                <!-- Panel 3: Raw Image -->
+                <div class="relative aspect-square rounded-xl overflow-hidden bg-gray-100 border border-gray-200 group shadow-sm transition duration-300 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&q=80&w=400" alt="Production Frame Before 2" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500">
+                    <span class="absolute bottom-3 left-3 bg-black/80 backdrop-blur-sm text-[9px] font-heading font-bold uppercase tracking-widest px-2 py-1 rounded text-gray-300">
+                        RAW FRAME
+                    </span>
+                </div>
+
+                <!-- Panel 4: Mastered Image -->
+                <div class="relative aspect-square rounded-xl overflow-hidden bg-gray-100 border border-gray-200 group shadow-sm transition duration-300 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&q=80&w=400" alt="Production Frame After 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute bottom-3 left-3 bg-neutral-900 text-white text-[9px] font-heading font-black uppercase tracking-widest px-2 py-1 rounded shadow-sm">
+                        GRADED MASTER
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTENT CALLOUT PANEL (DEEP CHARCOAL BACKGROUND GAP) -->
+    <section class="bg-[#1F1F1F] text-white py-20 px-6 border-t border-white/5 relative z-20">
+        <div class="max-w-2xl mx-auto text-center space-y-4">
+            <h3 class="font-heading font-black text-2xl uppercase tracking-wide">Full Suite Visual Solutions</h3>
+            <p class="text-sm text-gray-400 font-light max-w-md mx-auto leading-relaxed">
+                Corporate, music, and commercial video layouts built cleanly to highlight your project's authority.
+            </p>
+            <div class="w-12 h-px bg-white/10 mx-auto my-4"></div>
+            <p class="text-xs text-gray-400 font-medium tracking-widest uppercase">Aerial photography and cinematic drone shots • Corporate event photography</p>
+        </div>
+    </section>
+
+    <!-- CONTACT CONTAINER (CLEAN DARK INTERFACE FOR FOOTER) -->
+    <section id="contact" class="bg-[#1A1A1A] text-white py-20 px-6 md:px-12 relative z-20 border-t border-white/5">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-[10px] font-heading font-black uppercase tracking-[0.3em] text-brand-green block mb-2">GET IN TOUCH</span>
+                <p class="text-xs text-gray-500 max-w-xs mx-auto font-light">Ready to capture your perspective? Reach out directly via the form below.</p>
+            </div>
+            
+            <form class="space-y-6 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-[10px] font-heading uppercase text-gray-400 tracking-widest mb-2 font-bold">Name / Corporation</label>
+                        <input type="text" class="w-full bg-[#242424] border border-white/5 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brand-green text-white transition" placeholder="Name">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-heading uppercase text-gray-400 tracking-widest mb-2 font-bold">Phone NO</label>
+                        <input type="tel" class="w-full bg-[#242424] border border-white/5 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brand-green text-white transition" placeholder="Phone Number">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-heading uppercase text-gray-400 tracking-widest mb-2 font-bold">Message</label>
+                    <textarea rows="5" class="w-full bg-[#242424] border border-white/5 rounded-lg px-4 py-3.5 text-sm focus:outline-none focus:border-brand-green text-white transition resize-none" placeholder="Describe video, drone, or photography production type..."></textarea>
+                </div>
+                <button type="button" class="w-full bg-brand-green text-white font-heading font-black py-4 rounded-lg text-xs uppercase tracking-widest hover:bg-emerald-600 transition duration-300 shadow-md">
+                    Submit 
+                </button>
+            </form>
+
+            <!-- Metadata Footer Row -->
+            <div class="mt-16 pt-12 border-t border-white/5 grid grid-cols-1 sm:grid-cols-2 gap-8 text-xs text-gray-400 max-w-xl mx-auto">
+                <div class="space-y-1 text-center sm:text-left">
+                    <p class="font-heading font-bold text-white uppercase tracking-wider text-[10px]"><i class="fas fa-map-marker-alt text-brand-green mr-2"></i>Location </p>
+                    <p class="font-light leading-relaxed text-gray-400">51 Ojodu Abiodun street , Isheri Ojodu Lagos NG, <br>Ojodu, Lagos 101233, Ogun State</p>
+                </div>
+                <div class="space-y-1 text-center sm:text-right">
+                    <p class="font-heading font-bold text-white uppercase tracking-wider text-[10px]">Digital Network<i class="fas fa-envelope text-brand-green ml-2 hidden sm:inline"></i></p>
+                    <p class="font-light text-gray-400">ekingzvisual@gmail.com</p>
+                    <p class="font-light text-gray-500 mt-1">+234 810 710 1103</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+<script src="./script.js"></script>
+<!-- CLEANED JAVASCRIPT ANIMATION BLOCK -->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Initialize the master animation timeline
+            const tl = gsap.timeline();
+
+            // 2. Fly-In execution sequence
+            tl.to("#hero-drone", {
+                duration: 2.2,
+                right: window.innerWidth > 768 ? "12%" : "5%",
+                opacity: 1,
+                ease: "power4.out",
+                onComplete: startDroneHover
+            });
+
+            // 3. Persistent hovering engine vibration loop
+            function startDroneHover() {
+                // Gentle altitude drift loop
+                gsap.to("#hero-drone", {
+                    y: "-=12",
+                    duration: 1.8,
+                    ease: "sine.inOut",
+                    yoyo: true,
+                    repeat: -1
+                });
+
+                // Micro high-speed engine vibration loop
+                gsap.to("#hero-drone img", {
+                    x: "+=0.8",
+                    y: "+=0.4",
+                    rotation: "+=0.3",
+                    duration: 0.04,
+                    ease: "none",
+                    yoyo: true,
+                    repeat: -1
+                });
+            }
+        });
+    </script>
